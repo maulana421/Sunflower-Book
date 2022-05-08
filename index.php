@@ -45,7 +45,7 @@ $hitung2 = pg_num_rows($ctg);
                                     <p class="text-wrap"><?= $row['penerbit']; ?></p>
                                 </div>
                                 <div class="col-3 col-sm-3 col-md-2">
-                                    <a href="detail.php?id=<?= $row['id']; ?>" class="btn btn-primary">Detail<i class="bi bi-caret-right-fill ml-1"></i></a>
+                                    <a href="detail.php?id=<?= $row['id']; ?>" class="btn btn-danger">Detail<i class="bi bi-caret-right-fill ml-1"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -54,7 +54,7 @@ $hitung2 = pg_num_rows($ctg);
             </div>
         </div>
         <div class="col-md-4">
-                <a href="tambah.php" class="btn btn-Primary w-100 mb-4">Tambah Buku Baru</a>                
+                <a href="tambah.php" class="btn btn-danger w-100 mb-4">Tambah Buku Baru</a>                
         </div>
     </div>
 
