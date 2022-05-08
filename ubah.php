@@ -46,7 +46,7 @@ while($row = pg_fetch_array($query)){
                     </div>
                     <div class="text-right">
                         <button class="btn btn-secondary mr-3" type="button" onclick="history.back()">Batal</button>
-                        <input type="submit" name="submit" class="btn btn-primary" value="Simpan" onclick="return confirm('Apakah Anda Yakin?')">
+                        <input type="submit" name="submit" class="btn btn-danger" value="Simpan" onclick="return confirm('Apakah Anda Yakin?')">
                     </div>
                 </div>
             </form>
