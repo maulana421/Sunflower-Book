@@ -1,0 +1,30 @@
+<div class="card mb-4">
+                    <div class="card-body">
+                        <p>Jumlah kategori saat ini</p>
+                        <h1 class="text-center"><?php echo $hitung2 ?></h1>
+                    </div>
+                </div>
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <p>Jumlah barang saat ini</p>
+                        <h1 class="text-center"><?php echo $hitung1 ?></h1>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header bg-primary text-white">
+                        Perubahan 1 minggu terakhir
+                    </div>
+                    <div class="card-body">
+                        <?php if(pg_num_rows($updated) == 0): ?>
+                            <p class="text-center text-muted">Belum ada data yang diubah</p>
+                        <?php else: ?>
+                            <?php while($rows = pg_fetch_array($updated)): ?>
+                                <p class="text-muted">Tanggal: <span><?= $rows['tgl'] ?></span></p>
+                                <p>Perubahan pada <span class="text-primary"><?= strtolower($rows['nama']); ?></span></p>
+                                <?php if(pg_num_rows($updated) > 1): ?>
+                                    <div class="dropdown-divider"></div>
+                                <?php endif; ?>
+                            <?php endwhile; ?>
+                        <?php endif; ?>
+                    </div>
+                </div>
